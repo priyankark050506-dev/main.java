@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+class SmartLight {
+    boolean isOn = false;
+
+    void turnOn() {
+        isOn = true;
+        System.out.println("Light is ON");
+    }
+
+    void turnOff() {
+        isOn = false;
+        System.out.println("Light is OFF");
+    }
