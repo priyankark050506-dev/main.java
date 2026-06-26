@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class SmartFactoryRPA {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("===== SMART FACTORY RPA SYSTEM =====");
+
+        // Production Data
+        System.out.print("Enter today's production count: ");
+        int production = sc.nextInt();
+
+        // Inventory Data
+        System.out.print("Enter current inventory level: ");
+        int inventory = sc.nextInt();
+
+        // Employee Attendance
+        System.out.print("Enter employees present today: ");
+        int attendance = sc.nextInt();
+
+        System.out.println("\n----- AUTOMATED REPORT -----");
+
+        System.out.println("Production Count : " + production);
+        System.out.println("Inventory Level  : " + inventory);
+        System.out.println("Employees Present: " + attendance);
+
+        // Inventory Alert
+        if (inventory < 100) {
+            System.out.println("ALERT: Inventory is LOW!");
+        } else {
+            System.out.println("Inventory Status: Sufficient");
+        }
+
+        // Production Status
+        if (production >= 1000) {
+            System.out.println("Production Status: Target Achieved");
+        } else {
+            System.out.println("Production Status: Target Not Achieved");
+        }
+
+        // Attendance Status
+        if (attendance >= 50) {
+            System.out.println("Attendance Status: Good");
+        } else {
+            System.out.println("Attendance Status: Low Attendance");
+        }
+
+        System.out.println("\nAutomated report generated successfully.");
+        System.out.println("Notification sent to Factory Manager.");
+
+        sc.close();
+    }
+}
